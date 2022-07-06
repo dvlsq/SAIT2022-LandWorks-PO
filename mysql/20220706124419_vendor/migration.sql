@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `schema_po`.`vendor` (
   `country` VARCHAR(100) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
   `contactnumber` VARCHAR(100) NOT NULL,
-  PRIMARY KEY (`vendorid`))
+  PRIMARY KEY (`vendorid`));

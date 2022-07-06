@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `schema_po`.`po_items` (
+CREATE TABLE `schema_po`.`po_items` (
   `poitemsid` INT NOT NULL,
   `purchaseid` INT NOT NULL,
   `itemsid` INT NOT NULL,
@@ -6,14 +6,14 @@ CREATE TABLE IF NOT EXISTS `schema_po`.`po_items` (
   `linetotal` DECIMAL(10,2) NOT NULL,
   PRIMARY KEY (`poitemsid`),
   INDEX `purchaseid_fk_idx` (`purchaseid` ASC) VISIBLE,
-  INDEX `itemsid_fk_idx` (`itemsid` ASC) VISIBLE,
+  INDEX `itemsid_idx` (`itemsid` ASC) VISIBLE,
   CONSTRAINT `purchaseid_fk`
     FOREIGN KEY (`purchaseid`)
     REFERENCES `schema_po`.`purchaseorder` (`purchaseid`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `itemsid_fk`
+  CONSTRAINT `itemsid`
     FOREIGN KEY (`itemsid`)
     REFERENCES `schema_po`.`items` (`itemsid`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION);

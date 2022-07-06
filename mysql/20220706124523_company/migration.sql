@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS `schema_po`.`company` (
   `country` VARCHAR(100) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
   `contactnumber` VARCHAR(100) NOT NULL,
-  PRIMARY KEY (`companyid`))
+  PRIMARY KEY (`companyid`));
