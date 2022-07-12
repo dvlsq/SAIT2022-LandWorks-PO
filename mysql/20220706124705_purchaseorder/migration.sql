@@ -1,4 +1,4 @@
-CREATE TABLE `schema_po`.`purchaseorder` (
+CREATE TABLE `purchaseorder` (
   `purchaseid` INT NOT NULL,
   `userid` INT NOT NULL,
   `vendorid` INT NOT NULL,
@@ -12,16 +12,16 @@ CREATE TABLE `schema_po`.`purchaseorder` (
   INDEX `companyid_fk_idx` (`companyid` ASC) VISIBLE,
   CONSTRAINT `userid_fk`
     FOREIGN KEY (`userid`)
-    REFERENCES `schema_po`.`users` (`userid`)
+    REFERENCES `users` (`userid`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `vendorid_fk`
     FOREIGN KEY (`userid`)
-    REFERENCES `schema_po`.`vendor` (`vendorid`)
+    REFERENCES `vendor` (`vendorid`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `companyid_fk`
     FOREIGN KEY (`companyid`)
-    REFERENCES `schema_po`.`company` (`companyid`)
+    REFERENCES `company` (`companyid`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);

@@ -1,4 +1,4 @@
-CREATE TABLE `schema_po`.`po_items` (
+CREATE TABLE `po_items` (
   `poitemsid` INT NOT NULL,
   `purchaseid` INT NOT NULL,
   `itemsid` INT NOT NULL,
@@ -9,11 +9,11 @@ CREATE TABLE `schema_po`.`po_items` (
   INDEX `itemsid_idx` (`itemsid` ASC) VISIBLE,
   CONSTRAINT `purchaseid_fk`
     FOREIGN KEY (`purchaseid`)
-    REFERENCES `schema_po`.`purchaseorder` (`purchaseid`)
+    REFERENCES `purchaseorder` (`purchaseid`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `itemsid`
     FOREIGN KEY (`itemsid`)
-    REFERENCES `schema_po`.`items` (`itemsid`)
+    REFERENCES `items` (`itemsid`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);

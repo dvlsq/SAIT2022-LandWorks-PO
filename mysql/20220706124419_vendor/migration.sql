@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `schema_po`.`vendor` (
+CREATE TABLE IF NOT EXISTS `vendor` (
   `vendorid` INT NOT NULL,
   `vendorname` VARCHAR(100) NOT NULL,
   `contactperson` VARCHAR(100) NOT NULL,
